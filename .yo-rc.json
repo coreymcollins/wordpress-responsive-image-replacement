@@ -1,0 +1,17 @@
+{
+  "generator-plugin-wp": {
+    "name": "WDS Responsive Images",
+    "homepage": "http://webdevstudios.com",
+    "description": "Display beautiful responsive images at your own breakpoints.",
+    "version": "0.1.0",
+    "author": "WebDevStudios",
+    "authoremail": "contact@webdevstudios.com",
+    "authorurl": "http://webdevstudios.com",
+    "license": "GPLv2",
+    "slug": "wds-responsive-images",
+    "classname": "WDS_Responsive_Images",
+    "classprefix": "WDSRI_",
+    "prefix": "wds_responsive_images",
+    "year": 2015
+  }
+}

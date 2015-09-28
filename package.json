@@ -1,0 +1,21 @@
+{
+	"name": "wds-responsive-images",
+	"title": "WDS Responsive Images",
+	"version": "0.1.0",
+	"description": "Display beautiful responsive images at your own breakpoints.",
+	"author": {
+		"name": "WebDevStudios",
+		"url": "http://webdevstudios.com"
+	},
+	"license": "GPLv2",
+	"devDependencies": {
+	    "grunt": "latest",
+	    "grunt-contrib-watch": "latest",
+	    "grunt-wp-i18n": "latest",
+	    "load-grunt-tasks": "latest",
+	    "grunt-sass": "latest",
+	    "grunt-contrib-cssmin": "latest",
+	    "grunt-jscs": "^2.1.0",
+	    "grunt-contrib-uglify": "latest"
+	}
+}

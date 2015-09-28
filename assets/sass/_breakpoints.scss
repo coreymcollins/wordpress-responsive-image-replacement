@@ -1,0 +1,64 @@
+//--------------------------------------------------------------
+// Breakpoint Setup
+//--------------------------------------------------------------
+
+/// Breakpoints Sass list map for Media Queries @mixin
+/// @group wds
+$breakpoints: (
+	large-desktop: 105em, // 1680px
+	desktop: 85.375em, // 1366px
+	tablet-landscape: 64em, // 1024px
+	wp-admin-bar: 48.9375em, // 783px
+	tablet-portrait: 48em, // 768px
+	phone-landscape: 40em, // 640px
+	phone-portrait: 22.5em, // 360px
+);
+
+// Add pseudo elements of our breakpoint names
+// so we can apply breakpoint-specific JS
+body:before {
+  content: "phone-portrait";
+  display: none; // Prevent from displaying.
+}
+
+// Phone Landscape
+@media (min-width: 640px) {
+  body:before {
+    content: "phone-landscape";
+  }
+}
+
+// Tablet Portrait
+@media (min-width: 768px) {
+  body:before {
+    content: "tablet-portrait";
+  }
+}
+
+// WP Admin Bar
+@media (min-width: 783px) {
+  body:before {
+    content: "wp-admin-bar";
+  }
+}
+
+// Tablet Landscape
+@media (min-width: 1024px) {
+  body:before {
+    content: "tablet-landscape";
+  }
+}
+
+// Desktop
+@media (min-width: 1366px) {
+  body:before {
+    content: "desktop";
+  }
+}
+
+// Large Desktop
+@media (min-width: 1680px) {
+  body:before {
+    content: "large-desktop";
+  }
+}
