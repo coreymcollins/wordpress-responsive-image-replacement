@@ -38,7 +38,7 @@ Once your breakpoints are in place, the JavaScript needs to be initalized.  You 
 
 Below is an example of how to adjust the image size for breakpoints:
 
-`
+<pre>
 // Listen for a window resize
 $(window).resize(function() {
 
@@ -58,7 +58,7 @@ $(window).resize(function() {
 	}
 
 }).resize();
-`
+</pre>
 
 ## Changelog ##
 
