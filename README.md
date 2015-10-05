@@ -22,13 +22,13 @@ Display beautiful responsive images at your own breakpoints.
 ## Usage Instructions ##
 
 There are default breakpoints included with the plugin if you do not wish to use your own.  The default breakpoints are:
-<strong>large-desktop:</strong> 1680px
-<strong>desktop:</strong> 1366px
-<strong>tablet-landscape:</strong> 1024px
-<strong>wp-admin-bar:</strong> 783px
-<strong>tablet-portrait:</strong> 768px
-<strong>phone-landscape:</strong> 640px
-<strong>phone-portrait:</strong> 360px
+<strong>large-desktop:</strong> 1680px<br />
+<strong>desktop:</strong> 1366px<br />
+<strong>tablet-landscape:</strong> 1024px<br />
+<strong>wp-admin-bar:</strong> 783px<br />
+<strong>tablet-portrait:</strong> 768px<br />
+<strong>phone-landscape:</strong> 640px<br />
+<strong>phone-portrait:</strong> 360px<br />
 
 If you wish to add your own custom breakpoints, they may be added on the plugin settings page.
 
@@ -38,7 +38,8 @@ Once your breakpoints are in place, the JavaScript needs to be initalized.  You 
 
 Below is an example of how to adjust the image size for breakpoints:
 
-`// Listen for a window resize
+`
+// Listen for a window resize
 $(window).resize(function() {
 
 	// Set our breakpoint value
@@ -56,7 +57,8 @@ $(window).resize(function() {
 		WPResponsiveImagesReplace( '.attachment-some-other-size', 'img-size-full' );
 	}
 
-}).resize();`
+}).resize();
+`
 
 ## Changelog ##
 
