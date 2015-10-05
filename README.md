@@ -1,11 +1,11 @@
 # WordPress Responsive Image Replacement #
-**Contributors:**      Corey M Collins
-**Donate link:**       http://coreymcollins.com
-**Tags:**
-**Requires at least:** 4.3
-**Tested up to:**      4.3
-**Stable tag:**        0.1.0
-**License:**           GPLv2
+**Contributors:**      Corey M Collins<br />
+**Donate link:**       http://coreymcollins.com<br />
+**Tags:**              responsive design, responsive, responsive images, images, image replacement<br />
+**Requires at least:** 4.3<br />
+**Tested up to:**      4.3<br />
+**Stable tag:**        0.1.0<br />
+**License:**           GPLv2<br />
 **License URI:**       http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description ##
