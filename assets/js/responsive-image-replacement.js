@@ -22,7 +22,7 @@ window.WPResponsiveImageReplacement = window.WPResponsiveImageReplacement || {};
 	};
 
 	// Make this function globally available
-	window.WPResponsiveImagesThing = function( attachmentClass, newImageSize) {
+	window.WPResponsiveImagesReplace = function( attachmentClass, newImageSize) {
 
 		$( attachmentClass ).attr( 'src', $( attachmentClass ).data( newImageSize ) );
 	}

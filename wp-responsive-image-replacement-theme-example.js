@@ -2,7 +2,7 @@
  * A sample file to demonstrate how to use the
  * WP Responsive Image Replacement functionality
  *
- * WPResponsiveImagesThing( '.attachment-full', 'img-size-medium' );
+ * WPResponsiveImagesReplace( '.attachment-full', 'img-size-medium' );
  * This function takes two values: the attachment class and the image size
  * which you wish to display at your specificed breakpoints
  *
@@ -28,11 +28,11 @@
 		if ( 'tablet-landscape' == WPResponsiveImagesGetBreakpointSize() ) {
 
 			// Set the image to a medium size at the tablet-landscape breakpoint
-			WPResponsiveImagesThing( '.attachment-full', 'img-size-medium' );
+			WPResponsiveImagesReplace( '.attachment-full', 'img-size-medium' );
 		} else if ( 'desktop' == WPResponsiveImagesGetBreakpointSize() ) {
 
 			// Return to the larger image size at the desktop breakpoint
-			WPResponsiveImagesThing( '.attachment-full', 'img-size-full' );
+			WPResponsiveImagesReplace( '.attachment-full', 'img-size-full' );
 		}
 
 	}).resize();
