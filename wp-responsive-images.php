@@ -34,6 +34,28 @@
  * Built using generator-plugin-wp
  */
 
+/**
+ * Bootstrap CMB2
+ * No need to check versions or if CMB2 is already loaded... the init file does that already!
+ *
+ * Check to see if CMB2 exists, and either bootstrap it or add a notice that it is missing
+ */
+if ( file_exists( dirname( __FILE__ ) . '/includes/CMB2/init.php' ) ) {
+	require_once 'includes/CMB2/init.php';
+} else {
+	add_action( 'admin_notices', 'cmb2_wp_responsive_images_missing_cmb2' );
+}
+
+/**
+ * Add an error notice to the dashboard if CMB2 is missing from the plugin
+ *
+ * @return void
+ */
+function cmb2_wp_responsive_images_missing_cmb2() { ?>
+<div class="error">
+	<p><?php _e( 'CMB2 Example Plugin is missing CMB2!', 'wds-responsive-images' ); ?></p>
+</div>
+<?php }
 
 /**
  * Autoloads files with classes when needed
@@ -135,6 +157,9 @@ class WP_Responsive_Images {
 
 		$this->plugin_classes();
 		$this->hooks();
+
+		// Include our settings page
+		require_once 'wp-responsive-images-settings.php';
 	}
 
 	/**
@@ -165,6 +190,9 @@ class WP_Responsive_Images {
 
 		// Enqueue our scripts
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ) );
+
+		// Load our custom styles in the footer if they exist
+		add_action( 'wp_footer', array( $this, 'custom_breakpoints' ) );
 	}
 
 	/**
@@ -351,9 +379,48 @@ class WP_Responsive_Images {
 	 * Enqueue our scripts
 	 */
 	public function scripts() {
-		wp_enqueue_script( 'responsive-image-replacement-scripts', $this->url . 'assets/js/responsive-image-replacement.js', array( 'jquery' ), '1.0.0', true );
 
-		wp_enqueue_style( 'responsive-images-replacement-styles', $this->url . 'style.css', array(), '1.0.0' );
+		// Enqueue JS
+		wp_enqueue_script( 'responsive-image-replacement-scripts', $this->url . 'assets/js/responsive-image-replacement.js', array( 'jquery' ), self::VERSION, true );
+
+		// Grab our settings
+		$wds_responsive_images_settings = cmb2_get_option( 'wp_responsive_images_options', 'wds-responsive-images-breakpoints' );
+
+		// If there ARE settings, don't enqueue our homebaked styles/breakpoints
+		if ( ! $wds_responsive_images_settings ) {
+			wp_enqueue_style( 'responsive-images-replacement-styles', $this->url . 'style.css', array(), self::VERSION );
+		}
+	}
+
+	/**
+	 * Add our custom breakpoints to the footer
+	 */
+	public function custom_breakpoints() {
+
+		// Grab our settings
+		$wds_responsive_images_settings = cmb2_get_option( 'wp_responsive_images_options', 'wds-responsive-images-breakpoints' );
+
+		// If we don't have settings, just stop
+		if ( ! $wds_responsive_images_settings ) {
+			return;
+		}
+
+		echo '<style type="text/css">'; ?>
+
+			body:before {
+				display: none;
+			}
+
+		<?php // Loop through each settings group and display it as a pseudo element
+		foreach( $wds_responsive_images_settings as $breakpoint ) : ?>
+			@media (min-width: <?php echo $breakpoint['breakpoint-dimensions']; ?>px ) {
+				body:before {
+					content: "<?php echo $breakpoint['breakpoint-name']; ?>";
+				}
+			}
+		<?php endforeach;
+
+		echo '</style>';
 	}
 }
 
