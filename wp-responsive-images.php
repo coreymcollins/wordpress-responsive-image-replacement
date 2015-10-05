@@ -159,7 +159,7 @@ class WP_Responsive_Images {
 		$this->hooks();
 
 		// Include our settings page
-		require_once 'wp-responsive-images-settings.php';
+		require_once 'includes/wp-responsive-images-settings.php';
 	}
 
 	/**
@@ -413,7 +413,7 @@ class WP_Responsive_Images {
 
 		<?php // Loop through each settings group and display it as a pseudo element
 		foreach( $wds_responsive_images_settings as $breakpoint ) : ?>
-			@media (min-width: <?php echo $breakpoint['breakpoint-dimensions']; ?>px ) {
+			@media (min-width: <?php echo $breakpoint['breakpoint-dimensions']; ?>px) {
 				body:before {
 					content: "<?php echo $breakpoint['breakpoint-name']; ?>";
 				}

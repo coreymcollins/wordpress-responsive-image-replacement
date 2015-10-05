@@ -103,7 +103,7 @@ class Myprefix_Admin {
 		$group_field_id = $cmb->add_field( array(
 		    'id'          => 'wds-responsive-images-breakpoints',
 		    'type'        => 'group',
-		    'description' => __( 'Set a custom set of breakpoint names and dimensions.  Order from largest to smallest.', 'wds-responsive-images' ),
+		    'description' => __( 'Set a custom set of breakpoint names and dimensions.  Order from smallest to largest.', 'wds-responsive-images' ),
 		    'options'     => array(
 		        'group_title'   => __( 'Custom Breakpoint {#}', 'wds-responsive-images' ), // since version 1.1.4, {#} gets replaced by row number
 		        'add_button'    => __( 'Add Custom Breakpoint', 'wds-responsive-images' ),
