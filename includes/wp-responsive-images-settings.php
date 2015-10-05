@@ -5,14 +5,14 @@
  */
 class Myprefix_Admin {
 	/**
- 	 * Option key, and option page slug
- 	 * @var string
- 	 */
+		 * Option key, and option page slug
+		 * @var string
+		 */
 	private $key = 'wp_responsive_images_options';
 	/**
- 	 * Options page metabox id
- 	 * @var string
- 	 */
+		 * Options page metabox id
+		 * @var string
+		 */
 	private $metabox_id = 'wp_responsive_images_option_metabox';
 	/**
 	 * Options Page title
@@ -96,7 +96,7 @@ class Myprefix_Admin {
 				phone-landscape: 640px<br />
 				phone-portrait: 360px', 'wds-responsive-images' ),
 		    'type' => 'title',
-		    'id'   => 'breakpoint-defaults'
+		    'id'   => 'breakpoint-defaults',
 		) );
 
 		// Set our CMB2 fields

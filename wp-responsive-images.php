@@ -365,11 +365,11 @@ class WP_Responsive_Images {
 
 			// Output the size as a data attribute
 			if ( ! empty ( $image_src[0] ) ) {
-				$atts["data-img-size-$size"] = $image_src[0];
+				$atts[ "data-img-size-$size" ] = $image_src[0];
 			}
 
 			// Add the full-size URL to a data attribute
-			$atts["data-img-full-size"] = wp_get_attachment_url( $attachment->ID );
+			$atts['data-img-full-size'] = wp_get_attachment_url( $attachment->ID );
 		}
 
 	    return $atts;
@@ -412,7 +412,7 @@ class WP_Responsive_Images {
 			}
 
 		<?php // Loop through each settings group and display it as a pseudo element
-		foreach( $wds_responsive_images_settings as $breakpoint ) : ?>
+		foreach ( $wds_responsive_images_settings as $breakpoint ) : ?>
 			@media (min-width: <?php echo $breakpoint['breakpoint-dimensions']; ?>px) {
 				body:before {
 					content: "<?php echo $breakpoint['breakpoint-name']; ?>";
