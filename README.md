@@ -53,7 +53,7 @@ $(window).resize(function() {
 		WPResponsiveImagesReplace( '.attachment-some-other-size', 'img-size-medium' );
 	} else if ( 'phone-landscape' == WPResponsiveImagesGetBreakpointSize() ) {
 
-		// Return to the larger image size at the another-desktop breakpoint
+		// Return to the larger image size at the phone-landscape breakpoint
 		WPResponsiveImagesReplace( '.attachment-some-other-size', 'img-size-full' );
 	}
 
