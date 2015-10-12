@@ -21,7 +21,7 @@ Display beautiful responsive images at your own breakpoints.
 
 ## Usage Instructions ##
 
-There are default breakpoints included with the plugin if you do not wish to use your own.  The default breakpoints are:
+There are default breakpoints included with the plugin if you do not wish to use your own.  The default breakpoints are:<br />
 <strong>large-desktop:</strong> 1680px<br />
 <strong>desktop:</strong> 1366px<br />
 <strong>tablet-landscape:</strong> 1024px<br />
