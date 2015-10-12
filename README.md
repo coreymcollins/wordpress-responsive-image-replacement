@@ -21,6 +21,8 @@ Display beautiful responsive images at your own breakpoints.
 
 ## Usage Instructions ##
 
+This plugin utilizes the built-in classes applied to images by WordPress.  For instance, if you are displaying an image at thumbnail size, WordPress adds a class of "attachment-thumbnail" to the image.  The snippet below looks for specific classes applied to images and replaces their `img src` values at the specified breakpoints.
+
 There are default breakpoints included with the plugin if you do not wish to use your own.  The default breakpoints are:<br />
 <strong>phone-portrait:</strong> 360px<br />
 <strong>phone-landscape:</strong> 640px<br />
