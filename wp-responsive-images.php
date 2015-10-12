@@ -405,8 +405,6 @@ class WP_Responsive_Images {
 			return;
 		}
 
-		echo '<xmp>: '. print_r( $wds_responsive_images_settings, true ) .'</xmp>';
-
 		echo '<style type="text/css">'; ?>
 
 			body:before {
