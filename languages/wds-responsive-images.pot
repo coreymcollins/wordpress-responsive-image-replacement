@@ -1,0 +1,573 @@
+# Copyright (C) 2015 Corey M Collins
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Responsive Images 0.1.0\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/wp-responsive-images\n"
+"POT-Creation-Date: 2015-10-12 13:55:21+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.5.3\n"
+
+#: includes/CMB2/example-functions.php:82
+#: includes/CMB2/tests/test-cmb-field.php:244
+msgid "Test Metabox"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:93
+#: includes/CMB2/example-functions.php:380
+msgid "Test Text"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:94
+#: includes/CMB2/example-functions.php:106
+#: includes/CMB2/example-functions.php:114
+#: includes/CMB2/example-functions.php:122
+#: includes/CMB2/example-functions.php:131
+#: includes/CMB2/example-functions.php:139
+#: includes/CMB2/example-functions.php:153
+#: includes/CMB2/example-functions.php:160
+#: includes/CMB2/example-functions.php:168
+#: includes/CMB2/example-functions.php:185
+#: includes/CMB2/example-functions.php:194
+#: includes/CMB2/example-functions.php:202
+#: includes/CMB2/example-functions.php:209
+#: includes/CMB2/example-functions.php:216
+#: includes/CMB2/example-functions.php:230
+#: includes/CMB2/example-functions.php:243
+#: includes/CMB2/example-functions.php:256
+#: includes/CMB2/example-functions.php:268
+#: includes/CMB2/example-functions.php:277
+#: includes/CMB2/example-functions.php:285
+#: includes/CMB2/example-functions.php:294
+#: includes/CMB2/example-functions.php:301
+#: includes/CMB2/example-functions.php:315
+#: includes/CMB2/example-functions.php:381
+#: includes/CMB2/example-functions.php:476
+#: includes/CMB2/example-functions.php:484
+#: includes/CMB2/example-functions.php:491
+#: includes/CMB2/example-functions.php:498
+#: includes/CMB2/example-functions.php:505
+#: includes/CMB2/example-functions.php:512
+#: includes/CMB2/example-functions.php:519
+#: includes/CMB2/example-functions.php:557
+#: includes/CMB2/tests/test-cmb-field.php:256
+msgid "field description (optional)"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:105
+msgid "Test Text Small"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:113
+msgid "Test Text Medium"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:121
+msgid "Website URL"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:130
+msgid "Test Text Email"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:138
+msgid "Test Time"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:145
+#: includes/CMB2/example-functions.php:146
+msgid "Time zone"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:152
+msgid "Test Date Picker"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:159
+msgid "Test Date Picker (UNIX timestamp)"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:167
+msgid "Test Date/Time Picker Combo (UNIX timestamp)"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:184
+msgid "Test Money"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:193
+msgid "Test Color Picker"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:201
+msgid "Test Text Area"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:208
+msgid "Test Text Area Small"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:215
+msgid "Test Text Area for Code"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:222
+msgid "Test Title Weeeee"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:223
+msgid "This is a title description"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:229
+msgid "Test Select"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:235
+#: includes/CMB2/example-functions.php:248
+#: includes/CMB2/example-functions.php:260
+msgid "Option One"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:236
+#: includes/CMB2/example-functions.php:249
+#: includes/CMB2/example-functions.php:261
+msgid "Option Two"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:237
+#: includes/CMB2/example-functions.php:250
+#: includes/CMB2/example-functions.php:262
+msgid "Option Three"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:242
+msgid "Test Radio inline"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:255
+msgid "Test Radio"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:267
+msgid "Test Taxonomy Radio"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:276
+msgid "Test Taxonomy Select"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:284
+msgid "Test Taxonomy Multi Checkbox"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:293
+msgid "Test Checkbox"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:300
+#: includes/CMB2/tests/test-cmb-field.php:255
+msgid "Test Multi Checkbox"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:306
+#: includes/CMB2/tests/test-cmb-field.php:261
+msgid "Check One"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:307
+#: includes/CMB2/tests/test-cmb-field.php:262
+msgid "Check Two"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:308
+#: includes/CMB2/tests/test-cmb-field.php:263
+msgid "Check Three"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:314
+msgid "Test wysiwyg"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:322
+msgid "Test Image"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:323
+msgid "Upload an image or enter a URL."
+msgstr ""
+
+#: includes/CMB2/example-functions.php:329
+msgid "Multiple Files"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:330
+msgid "Upload or add multiple images/attachments."
+msgstr ""
+
+#: includes/CMB2/example-functions.php:337
+msgid "oEmbed"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:338
+msgid ""
+"Enter a youtube, twitter, or instagram URL. Supports services listed at <a "
+"href=\"http://codex.wordpress.org/Embeds\">http://codex.wordpress.org/"
+"Embeds</a>."
+msgstr ""
+
+#: includes/CMB2/example-functions.php:371
+msgid "About Page Metabox"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:402
+msgid "Repeating Field Group"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:410
+msgid "Generates reusable form entries"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:412
+msgid "Entry {#}"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:413
+msgid "Add Another Entry"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:414
+msgid "Remove Entry"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:427
+msgid "Entry Title"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:434
+msgid "Description"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:435
+msgid "Write a short description for this entry"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:441
+msgid "Entry Image"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:447
+msgid "Image Caption"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:468
+msgid "User Profile Metabox"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:475
+msgid "Extra Info"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:483
+msgid "Avatar"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:490
+msgid "Facebook URL"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:497
+msgid "Twitter URL"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:504
+msgid "Google+ URL"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:511
+msgid "Linkedin URL"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:518
+msgid "User Field"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:541
+msgid "Theme Options Metabox"
+msgstr ""
+
+#: includes/CMB2/example-functions.php:556
+msgid "Site Background Color"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2.php:120
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2.php:332
+msgid "Click to toggle"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Ajax.php:40
+msgid "Please Try Again"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Ajax.php:135
+#: includes/CMB2/tests/test-cmb-types.php:811
+msgid "Remove Embed"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Ajax.php:139
+#: includes/CMB2/tests/test-cmb-types.php:812
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Field.php:955
+msgid "Add Group"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Field.php:956
+msgid "Remove Group"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Field.php:978
+#: includes/CMB2/includes/CMB2_Field.php:982
+#: includes/CMB2/tests/test-cmb-field.php:216
+msgid "None"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:86 includes/CMB2/includes/CMB2_JS.php:119
+msgid "Clear"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:87
+msgid "Default"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:88
+msgid "Select Color"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:89
+msgid "Current Color"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:110
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:111
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:112
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:113
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:114
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:115
+msgid "Next"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:116
+msgid "Prev"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:117
+msgid "Today"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:118
+#: includes/CMB2/includes/CMB2_JS.php:128
+msgid "Done"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:122
+msgid "Choose Time"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:123
+msgid "Time"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:124
+msgid "Hour"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:125
+msgid "Minute"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:126
+msgid "Second"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:127
+msgid "Now"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:135
+msgid "Use this file"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:136
+msgid "Use these files"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:137
+#: includes/CMB2/includes/CMB2_Types.php:1004
+msgid "Remove Image"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:138
+#: includes/CMB2/includes/CMB2_Types.php:357
+#: includes/CMB2/includes/CMB2_Types.php:1023
+#: includes/CMB2/tests/test-cmb-types.php:155
+#: includes/CMB2/tests/test-cmb-types.php:163
+#: includes/CMB2/tests/test-cmb-types.php:760
+#: includes/CMB2/tests/test-cmb-types.php:785
+msgid "Remove"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:139
+#: includes/CMB2/includes/CMB2_Types.php:1018
+#: includes/CMB2/tests/test-cmb-types.php:761
+#: includes/CMB2/tests/test-cmb-types.php:786
+msgid "File:"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:140
+#: includes/CMB2/includes/CMB2_Types.php:1021
+#: includes/CMB2/tests/test-cmb-types.php:759
+#: includes/CMB2/tests/test-cmb-types.php:784
+msgid "Download"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:141
+msgid "Select / Deselect All"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Types.php:298
+msgid "Add Row"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Types.php:749
+#: includes/CMB2/includes/CMB2_Types.php:797
+msgid "No terms"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Types.php:864
+#: includes/CMB2/tests/test-cmb-types.php:736
+#: includes/CMB2/tests/test-cmb-types.php:762
+msgid "Add or Upload Files"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_Types.php:926
+#: includes/CMB2/tests/test-cmb-types.php:772
+#: includes/CMB2/tests/test-cmb-types.php:787
+msgid "Add or Upload File"
+msgstr ""
+
+#: includes/CMB2/includes/helper-functions.php:250
+msgid "Save"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:33
+msgid "WP Responsive Images"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:89
+msgid "Default Breakpoints"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:90
+msgid ""
+"The following are the default breakpoints used with WP Responsive "
+"Images:<br />\n"
+"\t\t    \tphone-portrait: 360px<br />\n"
+"\t\t\t\tphone-landscape: 640px<br />\n"
+"\t\t\t\ttablet-portrait: 768px<br />\n"
+"\t\t\t\twp-admin-bar: 783px<br />tablet-landscape: 1024px<br />\n"
+"\t\t\t\tdesktop: 1366px<br />\n"
+"\t\t\t\tlarge-desktop: 1680px"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:105
+msgid ""
+"Set a custom set of breakpoint names and dimensions.  Order from smallest "
+"to largest."
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:107
+msgid "Custom Breakpoint {#}"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:108
+msgid "Add Custom Breakpoint"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:109
+msgid "Remove Custom Breakpoint"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:116
+msgid "Breakpoint Name"
+msgstr ""
+
+#: includes/wp-responsive-images-settings.php:122
+msgid "Breakpoint Dimensions (pixel width)"
+msgstr ""
+
+#: wp-responsive-images.php:56
+msgid "CMB2 Example Plugin is missing CMB2!"
+msgstr ""
+
+#: wp-responsive-images.php:275
+msgid ""
+"WDS Responsive Images is missing requirements and has been <a "
+"href=\"%s\">deactivated</a>. Please make sure all requirements are "
+"available."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WordPress Responsive Images"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://coreymcollins.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Display beautiful responsive images at your own breakpoints."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Corey M Collins"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:109
+msgctxt "Valid formatDate string for jquery-ui datepicker"
+msgid "mm/dd/yy"
+msgstr ""
+
+#: includes/CMB2/includes/CMB2_JS.php:129
+msgctxt ""
+"Valid formatting string, as per "
+"http://trentrichardson.com/examples/timepicker/"
+msgid "hh:mm TT"
+msgstr ""

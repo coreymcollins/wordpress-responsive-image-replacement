@@ -405,6 +405,8 @@ class WP_Responsive_Images {
 			return;
 		}
 
+		echo '<xmp>: '. print_r( $wds_responsive_images_settings, true ) .'</xmp>';
+
 		echo '<style type="text/css">'; ?>
 
 			body:before {
@@ -412,12 +414,22 @@ class WP_Responsive_Images {
 			}
 
 		<?php // Loop through each settings group and display it as a pseudo element
-		foreach ( $wds_responsive_images_settings as $breakpoint ) : ?>
-			@media (min-width: <?php echo $breakpoint['breakpoint-dimensions']; ?>px) {
+		$count = 0;
+		foreach ( $wds_responsive_images_settings as $breakpoint ) :
+			$count++;
+			// For our first breakpoint, we want to display the value
+			// without a min-width so a breakpoint is always visible
+			if( 1 == $count ) : ?>
 				body:before {
 					content: "<?php echo $breakpoint['breakpoint-name']; ?>";
 				}
-			}
+			<?php else : ?>
+				@media (min-width: <?php echo $breakpoint['breakpoint-dimensions']; ?>px) {
+					body:before {
+						content: "<?php echo $breakpoint['breakpoint-name']; ?>";
+					}
+				}
+			<?php endif; ?>
 		<?php endforeach;
 
 		echo '</style>';

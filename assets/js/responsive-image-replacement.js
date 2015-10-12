@@ -17,6 +17,11 @@ window.WPResponsiveImageReplacement = window.WPResponsiveImageReplacement || {};
 	app.init = function() {
 		app.cache();
 
+		console.log('breakpoint.refreshValue',breakpoint.value);
+
+		// Set our initial breakpoint
+		window.setBreakpoint();
+
 		// Remove width and height attributes from images
 		$( 'img' ).removeAttr( 'width' ).removeAttr( 'height' );
 	};
