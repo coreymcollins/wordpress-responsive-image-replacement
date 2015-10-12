@@ -88,13 +88,12 @@ class Myprefix_Admin {
 		$cmb->add_field( array(
 		    'name' => __( 'Default Breakpoints', 'wds-responsive-images' ),
 		    'desc' => __( 'The following are the default breakpoints used with WP Responsive Images:<br />
-		    	large-desktop: 1680px<br />
-				desktop: 1366px<br />
-				tablet-landscape: 1024px<br />
-				wp-admin-bar: 783px<br />
-				tablet-portrait: 768px<br />
+		    	phone-portrait: 360px<br />
 				phone-landscape: 640px<br />
-				phone-portrait: 360px', 'wds-responsive-images' ),
+				tablet-portrait: 768px<br />
+				wp-admin-bar: 783px<br />tablet-landscape: 1024px<br />
+				desktop: 1366px<br />
+				large-desktop: 1680px', 'wds-responsive-images' ),
 		    'type' => 'title',
 		    'id'   => 'breakpoint-defaults',
 		) );
