@@ -109,6 +109,14 @@ class WP_Responsive_Images {
 	protected static $single_instance = null;
 
 	/**
+	 * Instance of WDSRI_Settings
+	 *
+	 * @since 0.1.0
+	 * @var WDSRI_Settings null
+	 */
+	public $settings = null;
+
+	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since  0.1.0
@@ -136,7 +144,7 @@ class WP_Responsive_Images {
 		$this->hooks();
 
 		// Include our settings page
-		require_once 'includes/wp-responsive-images-settings.php';
+//		require_once 'includes/wp-responsive-images-settings.php';
 	}
 
 	/**
@@ -148,6 +156,7 @@ class WP_Responsive_Images {
 	function plugin_classes() {
 		// Attach other plugin classes to the base plugin class.
 		// $this->admin = new WDSRI_Admin( $this );
+		$this->settings = new WDSRI_Settings( $this );
 	}
 
 	/**
@@ -157,6 +166,10 @@ class WP_Responsive_Images {
 	 * @return null
 	 */
 	public function hooks() {
+
+		if ( $this->settings ) {
+			$this->settings->hooks();
+		}
 
 		add_action( 'init', array( $this, 'init' ) );
 
