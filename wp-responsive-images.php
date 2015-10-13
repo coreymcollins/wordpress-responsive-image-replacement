@@ -35,29 +35,6 @@
  */
 
 /**
- * Bootstrap CMB2
- * No need to check versions or if CMB2 is already loaded... the init file does that already!
- *
- * Check to see if CMB2 exists, and either bootstrap it or add a notice that it is missing
- */
-if ( file_exists( dirname( __FILE__ ) . '/includes/CMB2/init.php' ) ) {
-	require_once 'includes/CMB2/init.php';
-} else {
-	add_action( 'admin_notices', 'cmb2_wp_responsive_images_missing_cmb2' );
-}
-
-/**
- * Add an error notice to the dashboard if CMB2 is missing from the plugin
- *
- * @return void
- */
-function cmb2_wp_responsive_images_missing_cmb2() { ?>
-<div class="error">
-	<p><?php _e( 'CMB2 Example Plugin is missing CMB2!', 'wds-responsive-images' ); ?></p>
-</div>
-<?php }
-
-/**
  * Autoloads files with classes when needed
  *
  * @since  0.1.0
@@ -234,11 +211,13 @@ class WP_Responsive_Images {
 	 * @return boolean
 	 */
 	public static function meets_requirements() {
-		// Do checks for required classes / functions
-		// function_exists('') & class_exists('')
 
-		// We have met all requirements
-		return true;
+		if ( file_exists( dirname( __FILE__ ) . '/includes/CMB2/init.php' ) ) {
+			require_once 'includes/CMB2/init.php';
+			return true;
+		}
+
+		return false;
 	}
 
 	/**
@@ -272,7 +251,7 @@ class WP_Responsive_Images {
 	public function requirements_not_met_notice() {
 		// Output our error
 		echo '<div id="message" class="error">';
-		echo '<p>' . sprintf( __( 'WDS Responsive Images is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'wds-responsive-images' ), admin_url( 'plugins.php' ) ) . '</p>';
+		echo '<p>' . sprintf( __( 'WDS Responsive Images is missing CMB2 and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'wds-responsive-images' ), admin_url( 'plugins.php' ) ) . '</p>';
 		echo '</div>';
 	}
 
