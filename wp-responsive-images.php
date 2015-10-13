@@ -321,7 +321,7 @@ class WP_Responsive_Images {
 
 		// Bail if we somehow have no image sizes
 		if ( empty( $image_sizes ) ) {
-			return;
+			return $atts;
 		}
 
 		// Add the full size to the image size array
