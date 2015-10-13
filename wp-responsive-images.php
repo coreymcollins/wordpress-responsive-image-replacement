@@ -180,11 +180,6 @@ class WP_Responsive_Images {
 	 * @return null
 	 */
 	public function hooks() {
-		register_activation_hook( __FILE__, array( $this, '_activate' ) );
-		register_deactivation_hook( __FILE__, array( $this, '_deactivate' ) );
-
-		add_action( 'init', array( $this, 'init' ) );
-
 		// Add our image attributes
 		add_filter( 'wp_get_attachment_image_attributes', array( $this, 'add_img_attributes' ), 10, 2 );
 
@@ -193,87 +188,6 @@ class WP_Responsive_Images {
 
 		// Load our custom styles in the footer if they exist
 		add_action( 'wp_footer', array( $this, 'custom_breakpoints' ) );
-	}
-
-	/**
-	 * Activate the plugin
-	 *
-	 * @since  0.1.0
-	 * @return null
-	 */
-	function _activate() {
-		// Make sure any rewrite functionality has been loaded
-		flush_rewrite_rules();
-	}
-
-	/**
-	 * Deactivate the plugin
-	 * Uninstall routines should be in uninstall.php
-	 *
-	 * @since  0.1.0
-	 * @return null
-	 */
-	function _deactivate() {}
-
-	/**
-	 * Init hooks
-	 *
-	 * @since  0.1.0
-	 * @return null
-	 */
-	public function init() {
-		if ( $this->check_requirements() ) {
-			load_plugin_textdomain( 'wds-responsive-images', false, dirname( $this->basename ) . '/languages/' );
-		}
-	}
-
-	/**
-	 * Check that all plugin requirements are met
-	 *
-	 * @since  0.1.0
-	 * @return boolean
-	 */
-	public static function meets_requirements() {
-		// Do checks for required classes / functions
-		// function_exists('') & class_exists('')
-
-		// We have met all requirements
-		return true;
-	}
-
-	/**
-	 * Check if the plugin meets requirements and
-	 * disable it if they are not present.
-	 *
-	 * @since  0.1.0
-	 * @return boolean result of meets_requirements
-	 */
-	public function check_requirements() {
-		if ( ! $this->meets_requirements() ) {
-
-			// Add a dashboard notice
-			add_action( 'all_admin_notices', array( $this, 'requirements_not_met_notice' ) );
-
-			// Deactivate our plugin
-			deactivate_plugins( $this->basename );
-
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * Adds a notice to the dashboard if the plugin requirements are not met
-	 *
-	 * @since  0.1.0
-	 * @return null
-	 */
-	public function requirements_not_met_notice() {
-		// Output our error
-		echo '<div id="message" class="error">';
-		echo '<p>' . sprintf( __( 'WDS Responsive Images is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'wds-responsive-images' ), admin_url( 'plugins.php' ) ) . '</p>';
-		echo '</div>';
 	}
 
 	/**
