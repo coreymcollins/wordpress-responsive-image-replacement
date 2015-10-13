@@ -1,8 +1,7 @@
-window.WPResponsiveImageReplacement = window.WPResponsiveImageReplacement || {};
+window.WPResponsiveImageReplace = window.WPResponsiveImageReplace || {};
 
 (function( window, document, $, app, undefined ) {
 
-	var app = {};
 	var breakpoint = {};
 
 	breakpoint.refreshValue = function () {
@@ -17,37 +16,32 @@ window.WPResponsiveImageReplacement = window.WPResponsiveImageReplacement || {};
 	app.init = function() {
 		app.cache();
 
-		console.log('breakpoint.refreshValue',breakpoint.value);
-
 		// Set our initial breakpoint
-		window.setBreakpoint();
-
-		// Remove width and height attributes from images
-		$( 'img' ).removeAttr( 'width' ).removeAttr( 'height' );
+		app.setBreakpoint();
 	};
 
 	// Make this function globally available
-	window.WPResponsiveImagesReplace = function( attachmentClass, newImageSize) {
+	app.doReplacement = function( attachmentClass, newImageSize) {
 
-		$( attachmentClass ).attr( 'src', $( attachmentClass ).data( newImageSize ) );
-	}
+		// Remove width and height attributes from images
+		$( attachmentClass ).removeAttr( 'width' ).removeAttr( 'height' ).attr( 'src', $( attachmentClass ).data( newImageSize ) );
+	};
 
 	/**
 	 * Get the breakpoint size on window resize
 	 */
-	window.WPResponsiveImagesGetBreakpointSize = function() {
+	app.getGetBreakpointSize = function() {
 		return breakpoint.value;
-	}
+	};
 
 	/**
 	 * Set the breakpoint on resize
 	 */
-	window.setBreakpoint = function() {
+	app.setBreakpoint = function() {
 		breakpoint.refreshValue();
+		return breakpoint.value;
 	};
 
-	jQuery(document).ready( app.init );
+	$( app.init );
 
-	return app;
-
-})( window, document, jQuery, window.WPResponsiveImageReplacement );
+})( window, document, jQuery, window.WPResponsiveImageReplace );
