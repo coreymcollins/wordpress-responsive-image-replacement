@@ -242,7 +242,7 @@ class WP_Responsive_Images {
 	public function requirements_not_met_notice() {
 		// Output our error
 		echo '<div id="message" class="error">';
-		echo '<p>' . sprintf( __( 'WDS Responsive Images is missing CMB2 and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'wds-responsive-images' ), admin_url( 'plugins.php' ) ) . '</p>';
+		echo '<p>' . sprintf( __( 'WDS Responsive Images is missing CMB2 and has been <a href="%s">deactivated</a>. If you have cloned this from the repository, you will want to update your submodules for this project.', 'wds-responsive-images' ), admin_url( 'plugins.php' ) ) . '</p>';
 		echo '</div>';
 	}
 
