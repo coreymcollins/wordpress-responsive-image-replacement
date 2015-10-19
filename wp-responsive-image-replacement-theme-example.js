@@ -2,7 +2,7 @@
  * A sample file to demonstrate how to use the
  * WP Responsive Image Replacement functionality
  *
- * WPResponsiveImagesReplace( '.attachment-full', 'img-size-medium' );
+ * WPResponsiveImageReplace.doReplacement( '.attachment-full', 'img-size-medium' );
  * This function takes two values: the attachment class and the image size
  * which you wish to display at your specificed breakpoints
  *
@@ -15,26 +15,26 @@
  * So if you create an image size called "large-hero", your data-attribute name would be "img-size-large-hero"
  */
 
-( function($) {
+( function( $, imgReplace ) {
 
 	// Listen for a window resize
 	$(window).resize(function() {
 
 		// Set our breakpoint value
-		window.setBreakpoint();
+		imgReplace.setBreakpoint();
 
 		// Check to see if our breakpoint value is tablet-landscape
 		// If it is, replace the image
-		if ( 'tablet-landscape' == WPResponsiveImagesGetBreakpointSize() ) {
+		if ( 'tablet-landscape' == imgReplace.getGetBreakpointSize() ) {
 
 			// Set the image to a medium size at the tablet-landscape breakpoint
-			WPResponsiveImagesReplace( '.attachment-full', 'img-size-medium' );
-		} else if ( 'desktop' == WPResponsiveImagesGetBreakpointSize() ) {
+			imgReplace.doReplacement( '.attachment-full', 'img-size-medium' );
+		} else if ( 'desktop' == imgReplace.getGetBreakpointSize() ) {
 
 			// Return to the larger image size at the desktop breakpoint
-			WPResponsiveImagesReplace( '.attachment-full', 'img-size-full' );
+			imgReplace.doReplacement( '.attachment-full', 'img-size-full' );
 		}
 
 	}).resize();
 
-})( jQuery );
+})( jQuery, window.WPResponsiveImageReplace );

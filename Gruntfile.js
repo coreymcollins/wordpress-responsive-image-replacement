@@ -135,9 +135,8 @@ module.exports = function( grunt ) {
 	} );
 
 	// Default task.
-	grunt.registerTask( 'scripts', [] );
+	grunt.registerTask( 'scripts', [ 'jscs', 'uglify' ] );
 	grunt.registerTask( 'styles', [ 'sass', 'cssmin' ] );
-	grunt.registerTask( 'javascript', [ 'jscs', 'uglify' ] );
 	grunt.registerTask( 'php', [ 'addtextdomain', 'makepot' ] );
 	grunt.registerTask( 'default', ['styles', 'scripts', 'php'] );
 

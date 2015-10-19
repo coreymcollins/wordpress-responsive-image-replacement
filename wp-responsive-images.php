@@ -35,29 +35,6 @@
  */
 
 /**
- * Bootstrap CMB2
- * No need to check versions or if CMB2 is already loaded... the init file does that already!
- *
- * Check to see if CMB2 exists, and either bootstrap it or add a notice that it is missing
- */
-if ( file_exists( dirname( __FILE__ ) . '/includes/CMB2/init.php' ) ) {
-	require_once 'includes/CMB2/init.php';
-} else {
-	add_action( 'admin_notices', 'cmb2_wp_responsive_images_missing_cmb2' );
-}
-
-/**
- * Add an error notice to the dashboard if CMB2 is missing from the plugin
- *
- * @return void
- */
-function cmb2_wp_responsive_images_missing_cmb2() { ?>
-<div class="error">
-	<p><?php _e( 'CMB2 Example Plugin is missing CMB2!', 'wds-responsive-images' ); ?></p>
-</div>
-<?php }
-
-/**
  * Autoloads files with classes when needed
  *
  * @since  0.1.0
@@ -132,6 +109,14 @@ class WP_Responsive_Images {
 	protected static $single_instance = null;
 
 	/**
+	 * Instance of WDSRI_Settings
+	 *
+	 * @since 0.1.0
+	 * @var WDSRI_Settings null
+	 */
+	public $settings = null;
+
+	/**
 	 * Creates or returns an instance of this class.
 	 *
 	 * @since  0.1.0
@@ -159,7 +144,7 @@ class WP_Responsive_Images {
 		$this->hooks();
 
 		// Include our settings page
-		require_once 'includes/wp-responsive-images-settings.php';
+//		require_once 'includes/wp-responsive-images-settings.php';
 	}
 
 	/**
@@ -171,6 +156,7 @@ class WP_Responsive_Images {
 	function plugin_classes() {
 		// Attach other plugin classes to the base plugin class.
 		// $this->admin = new WDSRI_Admin( $this );
+		$this->settings = new WDSRI_Settings( $this );
 	}
 
 	/**
@@ -180,8 +166,10 @@ class WP_Responsive_Images {
 	 * @return null
 	 */
 	public function hooks() {
-		register_activation_hook( __FILE__, array( $this, '_activate' ) );
-		register_deactivation_hook( __FILE__, array( $this, '_deactivate' ) );
+
+		if ( $this->settings ) {
+			$this->settings->hooks();
+		}
 
 		add_action( 'init', array( $this, 'init' ) );
 
@@ -194,26 +182,6 @@ class WP_Responsive_Images {
 		// Load our custom styles in the footer if they exist
 		add_action( 'wp_footer', array( $this, 'custom_breakpoints' ) );
 	}
-
-	/**
-	 * Activate the plugin
-	 *
-	 * @since  0.1.0
-	 * @return null
-	 */
-	function _activate() {
-		// Make sure any rewrite functionality has been loaded
-		flush_rewrite_rules();
-	}
-
-	/**
-	 * Deactivate the plugin
-	 * Uninstall routines should be in uninstall.php
-	 *
-	 * @since  0.1.0
-	 * @return null
-	 */
-	function _deactivate() {}
 
 	/**
 	 * Init hooks
@@ -234,11 +202,13 @@ class WP_Responsive_Images {
 	 * @return boolean
 	 */
 	public static function meets_requirements() {
-		// Do checks for required classes / functions
-		// function_exists('') & class_exists('')
 
-		// We have met all requirements
-		return true;
+		if ( file_exists( dirname( __FILE__ ) . '/includes/CMB2/init.php' ) ) {
+			require_once 'includes/CMB2/init.php';
+			return true;
+		}
+
+		return false;
 	}
 
 	/**
@@ -272,7 +242,7 @@ class WP_Responsive_Images {
 	public function requirements_not_met_notice() {
 		// Output our error
 		echo '<div id="message" class="error">';
-		echo '<p>' . sprintf( __( 'WDS Responsive Images is missing requirements and has been <a href="%s">deactivated</a>. Please make sure all requirements are available.', 'wds-responsive-images' ), admin_url( 'plugins.php' ) ) . '</p>';
+		echo '<p>' . sprintf( __( 'WDS Responsive Images is missing CMB2 and has been <a href="%s">deactivated</a>. If you have cloned this from the repository, you will want to update your submodules for this project.', 'wds-responsive-images' ), admin_url( 'plugins.php' ) ) . '</p>';
 		echo '</div>';
 	}
 
@@ -351,7 +321,7 @@ class WP_Responsive_Images {
 
 		// Bail if we somehow have no image sizes
 		if ( empty( $image_sizes ) ) {
-			return;
+			return $atts;
 		}
 
 		// Add the full size to the image size array

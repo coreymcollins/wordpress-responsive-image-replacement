@@ -3,7 +3,7 @@
  * CMB2 Theme Options
  * @version 0.1.0
  */
-class Myprefix_Admin {
+class WDSRI_Settings {
 	/**
 		 * Option key, and option page slug
 		 * @var string
@@ -140,14 +140,14 @@ class Myprefix_Admin {
 	}
 }
 /**
- * Helper function to get/return the Myprefix_Admin object
+ * Helper function to get/return the WDSRI_Settings object
  * @since  0.1.0
- * @return Myprefix_Admin object
+ * @return WDSRI_Settings object
  */
 function wp_responsive_images_admin() {
 	static $object = null;
 	if ( is_null( $object ) ) {
-		$object = new Myprefix_Admin();
+		$object = new WDSRI_Settings();
 		$object->hooks();
 	}
 	return $object;
@@ -161,5 +161,3 @@ function wp_responsive_images_admin() {
 function wp_responsive_images_get_option( $key = '' ) {
 	return cmb2_get_option( wp_responsive_images_admin()->key, $key );
 }
-// Get it started
-wp_responsive_images_admin();
